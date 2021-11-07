@@ -18,19 +18,49 @@
 	</head>
 	<body>
 		<div class="text">
-		<h1>Introducing Darkcord</h1>
-		<h2 id="copyStart"><strong><a class="button" href="javascript:copyText('cd powercord/src/Powercord/themes && git clone https://github.com/dante-nl/Darkcord')" id="install">Click to copy the command to install Darkcord</strong></a></h2>
-		<h2>Darkcord is a theme for <a href="https://powercord.dev" target="_blank">Powercord</a>, 
-			a client modification for <a href="https://discord.com" target="_blank">Discord</a>.
-			that allows you to use custom themes and plugins.</h2>
-			<h2>Darkcord is a darker version of the standard Discord theme with lots more black and small changes.</h2>
-			<img src="Images/Darkcord%20ss1.png" style="width: 70%;">
-		<div class="important"><strong>Hey!</strong> I have used some CSS snippits in my code, but when I originally made this a while back, 
-			I removed the credits for some reason. If you want to be credited for work you did and receive the Contributor tag, please review the 
-			<a href="https://github.com/dante-nl/Darkcord" target="_blank" style="color: #FEE75C">source code</a> 
-			and send me (dante_nl#1234) a DM if I used your code.</div>
+		<h1>Make Discord even darker</h1>
+		
+		<h2>Darkcord is a theme for <a href="https://powercord.dev" target="_blank">Powercord</a> and <a href="https://goosemod.com" target="_blank">GooseMod</a> with lots more dark colors.</h2>
+		<h2>After you have used Darkcord, you probably think Discord's dark mode is light.</h2>
+		<img src="Images/Darkcord%20ss1.png" alt="Screenshot of a Discord server with Darkcord" style="width: 70%;">
+		<hr>
+		<h2>How to install?</h2>
+		<p>Darkcord is very easy to install on both Powercord and GooseMod, and apart from changes by the clients, they both look the same.</p>
+		<p>Please select what client modification you use</p>
+		<h3><a href="javascript:installationPowercord()" class="button">Installation for Powercord</a></h3>
+			<div id="installationPowercord" style="display: none">
+				<h3>To install Darkcord, you have to open the Terminal on macOS and Linux, or the Command Prompt on Windows.</h3>
+				<ul>
+					<li><strong>macOS:</strong> Press &#8984; + Space and type "Terminal" and press Enter</li>
+					<li><strong>Linux:</strong> Press CTRL + ALT + T</li>
+					<li><strong>Windows:</strong> Press Windows key + R, type "cmd" and press Enter</li>
+				</ul>
+				<h3>Then you have to copy the command using the button below and paste it in your Terminal or Command Prompt</h3>
+				<p id="copyStart"><strong><a class="button" href="javascript:copyText('cd powercord/src/Powercord/themes && git clone https://github.com/dante-nl/Darkcord')" id="install">Copy command</strong></a></p>
+				<h3>After you did that, press Enter, reload your Discord. Then you can enable it via a plugin like <a href="https://github.com/redstonekasi/theme-toggler" target="_blank">Theme Toggler</a> to enable it, if it isn't enabled automatically.</h3>
+			</div>
+		<h3><a href="javascript:installationGooseMod()" class="button">Installation for GooseMod</a></h3>
+			<div id="installationGooseMod" style="display: none">
+				<h3>To install Darkcord, you have to go to the Theme Store that you can access via Discord's Home (where DMs are) and clicking Themes.</h3>
+				<h3>When you did that, you can search for "Darkcord" and clicking "Install". And you're done!</h3>
+				<img src="Images/DarkcordInstallationGooseMod.png" alt="Darkcord on the GooseMod Theme Store" style="width: 70%;">
+			</div>
+		<hr>
+		<h2>Contribution</h2>
+		<p>If you would like a "Contributor" tag next to your name, you can help out with Darkcord by adding (or tweaking) some code! You have to send me (dante_nl#1234) a DM when you did.
+			Please make sure you have your Github visible on your Discord profile, so I can be sure that it was you who modified the code, not someone else.
+		<br>
+			When everything is correct, you get your tag, that looks something like this!</p>
+		<img src="Images/DarkcordContributorTag.png" width="70%">
+		<div class="important"><strong>Hey!</strong> I have used some CSS snippits in my code, but when I originally made this a
+			while back,
+			I removed the credits for some reason. If you want to be credited for work you did and receive the Contributor tag,
+			please review the
+			<a href="https://github.com/dante-nl/Darkcord" target="_blank" style="color: #FEE75C">source code</a>
+			and send me (dante_nl#1234) a DM if I used your code.
 		</div>
-
+		</div>
+			
 		<script>
 			/* Copy command */
 			function copyText(text) {
@@ -40,8 +70,29 @@
 					textField.select();
 					document.execCommand('copy');
 					textField.remove();
-					document.getElementById("copyStart").innerHTML = `<div class='alert'>
-					<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>Paste the copied text in the Command Prompt on Windows or the Terminal on macOS and Linux</div >`
+					document.getElementById("copyStart").innerHTML = `<div class='alert-button'><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>Command has been copied!</div>`
+				}
+
+			/* Reveal installation info for Powercord */
+
+			function installationPowercord() {
+				var x = document.getElementById("installationPowercord");
+				if (x.style.display === "none") {
+					x.style.display = "block";
+  				} else {
+					x.style.display = "none";
+				}
+			}
+
+			/* Reveal installation info for GooseMod */
+
+				function installationGooseMod() {
+					var x = document.getElementById("installationGooseMod");
+					if (x.style.display === "none") {
+						x.style.display = "block";
+					} else {
+						x.style.display = "none";
+					}
 				}
 		</script>
 	</body>
