@@ -57,6 +57,18 @@ img {
   border-radius: 8px;
 }
 
+.alert-button {
+  display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: #5865f2;
+    font: normal normal bold 20px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .closebtn {
   margin-left: 15px;
   color: white;
@@ -70,4 +82,19 @@ img {
 
 .closebtn:hover {
   color: black;
+}
+
+hr {
+  background-color: #6a79ff;
+  height: 3px;
+  border-radius: 8px;
+  border: none;
+}
+
+ul {
+  text-align: center;
+}
+
+li {
+  text-align: left;
 }
